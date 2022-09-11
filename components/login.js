@@ -1,7 +1,7 @@
 import react from "react";
 import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity, ImageBackground } from "react-native";
-import { useState } from "react";
 import { Ionicons } from '@expo/vector-icons'
+import { useState } from "react";
 
 const img = '../assets/fundo-azul.jpg'
 
