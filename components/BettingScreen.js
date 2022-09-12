@@ -1,50 +1,50 @@
 import react from "react";
-import { View, Text, StyleSheet, ScrollViewBase } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Ionicons } from '@expo/vector-icons'
 import { TouchableOpacity } from "react-native";
 
 
-export default function() {
+export default function({navigation}) {
     return(
-        <View style={styles.mainContainer}>
+        <ScrollView style={styles.mainContainer}>
             <View style={styles.containerBar}>
-                <Ionicons name="logo-youtube" size={64} style={styles.icon}></Ionicons>
+                <Ionicons name="logo-react" size={128} style={styles.icon}></Ionicons>
             </View>
 
             <View style={styles.iconsContainer}>
-                <TouchableOpacity style={styles.iconSena}>
+                <TouchableOpacity style={styles.iconSena} onPress={() => navigation.navigate('Resultados Mega Sena')}>
                     <View>
-                        <Ionicons name="flower-outline" size={128}></Ionicons>
+                        <Ionicons name="rocket-sharp" size={128}></Ionicons>
                         <Text style={styles.txtIcons}>Mega-Sena</Text>
                     </View>
                 </TouchableOpacity>
 
                 <View style={styles.iconQuina}>
-                    <Ionicons name="flower-outline" size={128}></Ionicons>
+                    <Ionicons name="rocket-sharp" size={128}></Ionicons>
                     <Text style={styles.txtIcons}>Quina</Text>
                 </View>
 
                 <View style={styles.iconLotoMania}>
-                    <Ionicons name="flower-outline" size={128}></Ionicons>
+                    <Ionicons name="rocket-sharp" size={128}></Ionicons>
                     <Text style={styles.txtIcons}>Loto Mania</Text>
                 </View>
 
                 <View style={styles.iconLoto}>
-                    <Ionicons name="flower-outline" size={128}></Ionicons>
+                    <Ionicons name="rocket-sharp" size={128}></Ionicons>
                     <Text style={styles.txtIcons}>LotoFácil</Text>
                 </View>
 
                 <View style={styles.iconTime}>
-                    <Ionicons name="flower-outline" size={128}></Ionicons>
+                    <Ionicons name="rocket-sharp" size={128}></Ionicons>
                     <Text style={styles.txtIcons}>TimeMania</Text>
                 </View>
 
                 <View style={styles.iconDupla}>
-                    <Ionicons name="flower-outline" size={128}></Ionicons>
+                    <Ionicons name="rocket-sharp" size={128}></Ionicons>
                     <Text style={styles.txtIcons}>DuplaSena</Text>
                 </View>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -52,19 +52,19 @@ export default function() {
 const styles = StyleSheet.create({
     mainContainer: {
         width: '100%',
-        height: '100%'
+        height: '100%',
     },
 
     icon: {
-        marginTop: 30
+        justifyContent: "center"
     },
 
     containerBar: {
         backgroundColor: '#3498DB',
         width: '100%',
-        height: '20%',
+        height: '15%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
 
     iconsContainer: {

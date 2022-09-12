@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const img = '../assets/fundo-azul.jpg'
 
-export default function() {
+export default function({navigation}) {
     const [login, setLogin] = useState("login")
     const [passaword, setPassword] = useState("passaword")
     const [hidePass, setHidePass] = useState(true)
@@ -57,7 +57,9 @@ export default function() {
                 </View>
 
                 <View style={styles.containerButtonLogin}>
-                    <TouchableOpacity style={styles.buttonLogin}>
+                    <TouchableOpacity style={styles.buttonLogin}
+                        onPress={() => navigation.navigate('Resultados')}
+                    >
                         <Text>Login</Text>
                     </TouchableOpacity>
                 </View>
