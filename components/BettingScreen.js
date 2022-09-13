@@ -2,15 +2,19 @@ import react from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Ionicons } from '@expo/vector-icons'
 import { TouchableOpacity } from "react-native";
+import Label from "./Label";
+
 
 
 export default function({navigation}) {
     return(
         <ScrollView style={styles.mainContainer}>
+            <Label>
+                
+            </Label>
             <View style={styles.containerBar}>
                 <Ionicons name="logo-react" size={128} style={styles.icon}></Ionicons>
             </View>
-
             <View style={styles.iconsContainer}>
                 <TouchableOpacity style={styles.iconSena} onPress={() => navigation.navigate('Resultados Mega Sena')}>
                     <View>
@@ -60,7 +64,6 @@ const styles = StyleSheet.create({
     },
 
     containerBar: {
-        backgroundColor: '#3498DB',
         width: '100%',
         height: '15%',
         alignItems: 'center',

@@ -1,10 +1,13 @@
 import react from 'react';
 import {View, Text, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
+
+import Label from './Label';
  
 const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
+      <Label/>
       <View style={styles.mainContainer}>
         <View style={styles.container}>
             <Ionicons name='logo-react' size={128}/>
@@ -30,7 +33,6 @@ const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
         padding: 16,
-        backgroundColor: '#3498DB'
     },
 
     container: {
@@ -44,26 +46,24 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 16,
         fontWeight: 'bold',
-        color: '#F39C12'
+        color: '#000'
     },
 
     txt2: {
-        fontSize: 18,
+        fontSize: 15,
         textAlign: 'center',
         color: '#BFC9CA',
     },
 
     buttonContainer: {
-        backgroundColor: '#FFF',
         margin: 150,
-        backgroundColor: '#3498DB',
     },
 
     button: {
         flexDirection: 'row',
         width: 210,
         borderRadius: 15,        
-        backgroundColor: '#FFF',
+        backgroundColor: '#F39C12',
     },
 
 })
