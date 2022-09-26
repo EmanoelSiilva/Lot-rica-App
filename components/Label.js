@@ -1,5 +1,5 @@
 import react from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 import WavyBackground from "react-native-wavy-background";
 

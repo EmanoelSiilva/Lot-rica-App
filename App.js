@@ -9,6 +9,7 @@ import Login from './components/Login'
 import Tela from './components/BettingScreen'
 import Home from './components/HomeScreen'
 import Result from './components/ResultScreen'
+import User from './components/UserScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name='Login'component={Login}/>
         <Stack.Screen name='Resultados' component={Tela}/>
         <Stack.Screen name='Resultados Mega Sena' component={Result}/>
+        <Stack.Screen name='Tela do Usuario' component={User}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

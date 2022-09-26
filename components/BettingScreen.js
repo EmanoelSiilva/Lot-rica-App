@@ -1,5 +1,5 @@
 import react from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import { Ionicons } from '@expo/vector-icons'
 import { TouchableOpacity } from "react-native";
 import Label from "./Label";
@@ -9,9 +9,18 @@ import Label from "./Label";
 export default function({navigation}) {
     return(
         <ScrollView style={styles.mainContainer}>
-            <Label>
-                
-            </Label>
+            <Label/>
+
+            <TouchableOpacity onPress={() => navigation.navigate('Tela do Usuario')}>
+                <View style={styles.userIcon}>
+                    <Image
+                        source={require('../assets/user-icon.png')}
+                        style={styles.imgIcon}
+                    />
+                    <Text>Tela do Usuário</Text>
+                </View>
+            </TouchableOpacity>
+
             <View style={styles.containerBar}>
                 <Ionicons name="logo-react" size={128} style={styles.icon}></Ionicons>
             </View>
@@ -134,5 +143,16 @@ const styles = StyleSheet.create({
         color: '#FFF',
         fontWeight: 'bold',
         fontSize: 24
+    },
+
+    userIcon:{
+        alignSelf: 'flex-end',
+        alignItems: 'center',
+        width: '50%',
+    },
+
+    imgIcon: {
+        height: 50,
+        width: 50
     }
 })

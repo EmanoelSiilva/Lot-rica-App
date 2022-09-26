@@ -1,5 +1,5 @@
 import react from 'react';
-import {View, Text, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, SafeAreaView, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 
 import Label from './Label';
