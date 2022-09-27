@@ -16,7 +16,15 @@ const HomeScreen = ({navigation}) => {
                 <Text style={styles.txt1}>Acesse a sua conta</Text>
                 <Ionicons name="enter-outline" size={32}/>
             </TouchableOpacity>
+
+            <Text style={styles.txt2}>Não possui uma conta?</Text>
+
+            <TouchableOpacity title='Faça seu cadastro' style={styles.button} onPress={() => navigation.navigate('Tela de Cadastro')}>
+                <Text style={[styles.txt1, {alignSelf: 'center'}]}>Faça seu cadastro</Text>
+                <Ionicons name="enter-outline" size={32}/>
+            </TouchableOpacity>
           </View>
+          
         </View>
         <Text
           style={styles.txt2}>
@@ -64,6 +72,7 @@ const styles = StyleSheet.create({
         width: 210,
         borderRadius: 15,        
         backgroundColor: '#F39C12',
+        margin: 15
     },
 
 })
